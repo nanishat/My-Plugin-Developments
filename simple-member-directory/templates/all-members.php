@@ -1,12 +1,15 @@
 <?php
 $args = [
-    'post_type' => 'member',
+    'post_type' => 'smd_member',
     'meta_query' => [
         [
             'key' => 'status',
-            'value' => 'Active'
+            'value' => 'Active',
+            'compare' => '='
         ]
-    ]
+    ],
+    'post_per_page' => -1,
+
 ];
 
 $query = new WP_Query($args);
